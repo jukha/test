@@ -7,8 +7,19 @@ const h1 = document.querySelector("h1");
 const h2 = document.querySelector("h2");
 const h3 = document.querySelector("h3");
 const h5 = document.querySelector("h5");
+const span = document.querySelector("span");
 const currentViewPortSize = window.matchMedia("(max-width: 800px)");
 const canHover = window.matchMedia("(hover:hover)");
+
+let portrait = window.matchMedia("(orientation: portrait)");
+
+portrait.addEventListener("change", function (e) {
+  if (e.matches) {
+    span.textContent = "Portrait";
+  } else {
+    span.textContent = "Landscape";
+  }
+});
 
 function changeText(mediaSize) {
   if (mediaSize.matches) {
