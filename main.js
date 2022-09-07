@@ -26,7 +26,7 @@ function isHoverable(canHover) {
   }
 }
 
-changeText(changeText);
+changeText(currentViewPortSize);
 isHoverable(canHover);
 
 document.getElementById("submitBtn").addEventListener("click", () => {
