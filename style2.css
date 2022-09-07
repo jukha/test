@@ -1,0 +1,6 @@
+*,
+*::before,
+*::after {
+    color: darkred !important;
+    background-color: yellow !important;
+}
