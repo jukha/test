@@ -38,8 +38,8 @@ function isHoverable(canHover) {
   }
 }
 
-currentViewPortSize.addEventListener("change", changeText);
-canHover.addEventListener("change", isHoverable);
+// currentViewPortSize.addEventListener("change", changeText);
+// canHover.addEventListener("change", isHoverable);
 changeText(changeText);
 isHoverable(canHover);
 
