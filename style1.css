@@ -4,3 +4,6 @@
     color: darkred !important;
     background-color: #fff !important;
 }
+input[type="submit"]{
+    color: darkred !important;
+}
