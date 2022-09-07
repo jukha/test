@@ -10,18 +10,6 @@ const h5 = document.querySelector("h5");
 const currentViewPortSize = window.matchMedia("(max-width: 800px)");
 const canHover = window.matchMedia("(hover:hover)");
 
-(function () {
-  window.onresize = displayWindowSize;
-  window.onload = displayWindowSize;
-
-  function displayWindowSize() {
-    let myWidth = window.innerWidth;
-    let myHeight = window.innerHeight;
-    // your size calculation code here
-    h5.innerHTML = myWidth + "x" + myHeight;
-  }
-})();
-
 function changeText(mediaSize) {
   if (mediaSize.matches) {
     h1.textContent = "Small Screen";
@@ -38,13 +26,8 @@ function isHoverable(canHover) {
   }
 }
 
-// currentViewPortSize.addEventListener("change", changeText);
-// canHover.addEventListener("change", isHoverable);
 changeText(changeText);
 isHoverable(canHover);
-
-// currentViewPortSize.removeEventListener("change", changeText);
-// canHover.removeEventListener("change", isHoverable);
 
 document.getElementById("submitBtn").addEventListener("click", () => {
   h3.textContent = "Color Scheme as per User Selection";
