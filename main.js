@@ -21,6 +21,13 @@ if (landscape.matches) {
   span.textContent = "landscape";
 }
 
+if (currentViewPortSize.matches) {
+  h1.textContent = "Small Screen";
+}
+if (!currentViewPortSize.matches) {
+  h1.textContent = "Large Screen";
+}
+
 portrait.addEventListener("change", function (e) {
   if (e.matches) {
     span.textContent = "Portrait";
@@ -28,6 +35,8 @@ portrait.addEventListener("change", function (e) {
     span.textContent = "Landscape";
   }
 });
+
+currentViewPortSize.addEventListener("change", changeText);
 
 function changeText(mediaSize) {
   if (mediaSize.matches) {
