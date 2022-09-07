@@ -12,6 +12,14 @@ const currentViewPortSize = window.matchMedia("(max-width: 800px)");
 const canHover = window.matchMedia("(hover:hover)");
 
 let portrait = window.matchMedia("(orientation: portrait)");
+let landscape = window.matchMedia("(orientation: landscape)");
+
+if (portrait.matches) {
+  span.textContent = "portrait";
+}
+if (landscape.matches) {
+  span.textContent = "landscape";
+}
 
 portrait.addEventListener("change", function (e) {
   if (e.matches) {
